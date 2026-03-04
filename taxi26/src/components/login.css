@@ -1,0 +1,297 @@
+/* ===================================================
+   PROFESSIONAL LOGIN PAGE STYLING — login.css
+   Enhanced with premium animations and effects
+   =================================================== */
+
+/* Background Slow Zoom/Pan Animation */
+@keyframes slowZoomPan {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.15) translate(1.5%, 2%);
+  }
+}
+
+.login-bg-zoom {
+  animation: slowZoomPan 45s ease-in-out infinite alternate;
+}
+
+/* Floating Animation for Brand Icon */
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse Ring Animation */
+@keyframes pulseRing {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Shimmer Effect for Button */
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Card Glow Animation */
+@keyframes cardGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+}
+
+/* Grid Pattern Animation */
+.login-grid-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(rgba(255, 163, 26, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 163, 26, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 60px);
+  }
+}
+
+/* Card Glow Effect */
+.login-card-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 163, 26, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  animation: cardGlow 4s ease-in-out infinite;
+  z-index: -1;
+  filter: blur(40px);
+}
+
+/* Animated Particles */
+.login-particles-box {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.login-particles-box span {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 163, 26, 0.2), rgba(255, 123, 0, 0.1));
+  animation: particleRise linear infinite;
+  box-shadow: 0 0 15px rgba(255, 163, 26, 0.15);
+}
+
+.login-particles-box span:nth-child(1) {
+  width: 12px;
+  height: 12px;
+  left: 10%;
+  bottom: -20px;
+  animation-duration: 20s;
+}
+
+.login-particles-box span:nth-child(2) {
+  width: 8px;
+  height: 8px;
+  left: 30%;
+  bottom: -20px;
+  animation-duration: 25s;
+  animation-delay: 2s;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.05));
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+}
+
+.login-particles-box span:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  bottom: -30px;
+  animation-duration: 28s;
+  animation-delay: 5s;
+}
+
+.login-particles-box span:nth-child(4) {
+  width: 6px;
+  height: 6px;
+  left: 70%;
+  bottom: -10px;
+  animation-duration: 22s;
+  animation-delay: 1s;
+}
+
+.login-particles-box span:nth-child(5) {
+  width: 16px;
+  height: 16px;
+  left: 85%;
+  bottom: -25px;
+  animation-duration: 26s;
+  animation-delay: 8s;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.15);
+}
+
+@keyframes particleRise {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-50vh) rotate(360deg) scale(1.1);
+  }
+  95% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(720deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Text Field Focus Animation */
+.MuiTextField-root:focus-within {
+  transform: scale(1.01);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover lift for social buttons */
+.MuiIconButton-root {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Custom scrollbar for inputs */
+.MuiOutlinedInput-input::-webkit-scrollbar {
+  width: 6px;
+}
+
+.MuiOutlinedInput-input::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 3px;
+}
+
+.MuiOutlinedInput-input::-webkit-scrollbar-thumb {
+  background: rgba(255, 163, 26, 0.3);
+  border-radius: 3px;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 163, 26, 0.3);
+  color: #fff;
+}
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .MuiInputLabel-root {
+  left: auto !important;
+  right: 14px !important;
+  transform-origin: top right !important;
+}
+
+.rtl .MuiOutlinedInput-notchedOutline {
+  text-align: right !important;
+}
+
+.rtl .MuiInputAdornment-positionStart {
+  margin-left: 8px !important;
+  margin-right: -4px !important;
+}
+
+.rtl .MuiInputAdornment-positionEnd {
+  margin-left: -4px !important;
+  margin-right: 8px !important;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 600px) {
+  .login-particles-box span {
+    opacity: 0.4;
+  }
+  
+  .login-grid-pattern {
+    opacity: 0.5;
+  }
+  
+  .login-card-glow {
+    opacity: 0.2;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .login-bg-zoom,
+  .login-particles-box span,
+  .login-grid-pattern,
+  .login-card-glow {
+    animation: none !important;
+  }
+  
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .login-card-glow {
+    display: none;
+  }
+  
+  .MuiPaper-root {
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .login-particles-box,
+  .login-grid-pattern,
+  .login-card-glow {
+    display: none !important;
+  }
+}
